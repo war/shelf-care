@@ -37,7 +37,7 @@
 
         private static void ValidatePublicationDate(DateTime publicationDate)
         {
-            // TODO: double check there aren't any issues to do with using DateTime.UtcNow
+            // TODO: inject datetime
             if (publicationDate > DateTime.UtcNow)
                 throw new ArgumentException("Publication date cannot be in the future", nameof(publicationDate));
         }
